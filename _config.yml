@@ -1,1 +1,5 @@
-theme: jekyll-theme-cayman 
+title: Laureline Vaucoy
+description: a basic portfolio for my projects
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-cayman
