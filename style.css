@@ -166,3 +166,52 @@ nav a {
     color: #9b603d;
     margin-top: 0px;
 }
+
+#contact {
+    min-height: 70vh;
+    padding: 0 4vw;
+    background: rgb(88, 142, 173);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+#email-button {
+    font-size: 1.4rem;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: 1px 1px 4px black;
+    background-color: rgb(50, 96, 122);
+    color: white;
+}
+  
+#email-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+footer {
+    width: 100vw;
+    height: 5vh;
+    background: rgb(50, 96, 122);
+    color: white;
+    text-align: center;
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-icons i {
+    font-size: 3.5rem;
+    margin: 1vw;
+    color: rgb(50, 96, 122);
+  }
+  
+#contact-icons i:hover {
+    color: white;
+}
