@@ -1,7 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "Merriweather Sans", "sans-serif";
+}
+
+h1, h2, h3 {
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 #top {
@@ -11,7 +15,44 @@
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-  }
+}
+
+header {
+    color: white;
+    text-shadow: black 1px 1px 2px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+}
+  
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+  
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+  
+nav li {
+    border: 2px solid hsla(360, 100%, 100%, 0);
+    line-height: 0;
+    margin: 1vw;
+}
+  
+nav li:hover {
+    border: 2px solid white;
+}
+  
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 2vw;
+    display: inline-block;
+}
 
   
 
