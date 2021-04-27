@@ -95,6 +95,11 @@ nav a {
     text-align: center;
 }
 
+#profile i {
+    font-size: 2rem;
+    /* border: solid purple; */
+}
+
 #profile-picture {
     min-width: 20vw;
     min-height: 20vw;
@@ -111,7 +116,6 @@ nav a {
     /* border: solid blue; */
     flex-basis: 30%;
     min-width: 300px;
-    text-align: justify;
 }
 
 #middle-profile-container {
@@ -123,11 +127,13 @@ nav a {
     /* border: solid green; */
     flex-basis: 30%;
     min-width: 300px;
-    text-align: justify;
 }
 
 #left-profile-container p, #right-profile-container p {
+    /* border: solid orange; */
     margin-top: 2vh;
+    margin-bottom: 3vh;
+    text-align: justify;
 }
 
 /* Rest to style later + add profile pic */
