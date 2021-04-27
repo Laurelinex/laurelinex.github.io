@@ -244,22 +244,39 @@ nav a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
   }
   
 #email-button {
-    font-size: 1.4rem;
+    /* font-size: 1.4rem;
     padding: 15px 35px;
     border-radius: 8px;
     font-family: 'Josefin Sans', sans-serif;
     box-shadow: 1px 1px 4px black;
+    color: white; */
     background-color: rgb(50, 96, 122);
-    color: white;
+    font-size: 1.4rem;
+    width: fit-content;
+    display:inline-block;
+    padding:0.8em 2em;
+    border:0.15em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius: 1em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
 }
   
 #email-button:hover {
-    background-color: white;
+    /* background-color: white;
     color: black;
-    cursor: pointer;
+    cursor: pointer; */
+    color:rgb(50, 96, 122);
+    background-color:#FFFFFF;
 }
 
 footer {
