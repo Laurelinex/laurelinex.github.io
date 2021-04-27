@@ -305,9 +305,9 @@ nav li {
     padding: 5vw;
 }
 
-/* #profile_pic_container {
+#middle-profile-container {
     order: -1;
-} */
+}
 
 #profile-picture {
     width: 250px;
