@@ -151,6 +151,7 @@ nav a {
 #portfolio h3 {
     font-size: 2rem;
     margin-top: 3vw;
+    color: rgb(50, 96, 122);
 }
 
 #portfolio hr {
@@ -158,6 +159,7 @@ nav a {
     border-radius: 5px;
     width: 20%;
     margin: auto;
+    color: rgb(50, 96, 122);
     /* margin-bottom: 2rem; */
   }
 
