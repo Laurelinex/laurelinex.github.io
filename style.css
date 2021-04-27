@@ -84,15 +84,18 @@ nav a {
 
 #profile h3 {
     font-size: 2rem;
-    margin-top: 1vw;
+    /* margin-top: 1vw; */
+    margin-top: 2vh;
+    
 }
 
 #profile h4 {
     font-size: 1.5rem;
     font-family: 'Josefin Sans', sans-serif;
-    margin: 0;
+    margin: 3vh
+    /*margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: center; */
 }
 
 #profile i {
@@ -131,8 +134,8 @@ nav a {
 
 #left-profile-container p, #right-profile-container p {
     /* border: solid orange; */
-    margin-top: 2vh;
-    margin-bottom: 3vh;
+    margin-top: 2vw;
+    margin-bottom: 3vw;
     text-align: justify;
 }
 
@@ -144,6 +147,19 @@ nav a {
     background: rgb(231, 214, 189);
     text-align: center;
 }
+
+#portfolio h3 {
+    font-size: 2rem;
+    margin-top: 3vw;
+}
+
+#portfolio hr {
+    border: 2px solid;
+    border-radius: 5px;
+    width: 20%;
+    margin: auto;
+    /* margin-bottom: 2rem; */
+  }
 
 #portfolio-container {
     display: flex;
