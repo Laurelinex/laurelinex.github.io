@@ -63,14 +63,36 @@ nav a {
 }
 
 #profile {
+    /* border: solid red; */
     background-color: rgb(88, 142, 173);
-    /* display: flex;
+    display: flex;
     justify-content: space-evenly;
-    align-items: center; */
+    align-items: center;
     font-size: 0.8rem;
     color: white;
     text-align: center;
     padding: 2vw;
+}
+
+#profile hr {
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 40%;
+    margin: auto;
+    /* margin-bottom: 2rem; */
+  }
+
+#profile h3 {
+    font-size: 2rem;
+    margin-top: 1vw;
+}
+
+#profile h4 {
+    font-size: 1.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 #profile-picture {
@@ -82,6 +104,30 @@ nav a {
     background-image: url(./images/profile.jpeg);
     background-size: cover;
     background-position: center;
+    margin: 2rem;
+}
+
+#left-profile-container {
+    /* border: solid blue; */
+    flex-basis: 30%;
+    min-width: 300px;
+    text-align: justify;
+}
+
+#middle-profile-container {
+    /* border: solid pink; */
+    flex-basis: 30%;
+}
+
+#right-profile-container {
+    /* border: solid green; */
+    flex-basis: 30%;
+    min-width: 300px;
+    text-align: justify;
+}
+
+#left-profile-container p, #right-profile-container p {
+    margin-top: 2vh;
 }
 
 /* Rest to style later + add profile pic */
