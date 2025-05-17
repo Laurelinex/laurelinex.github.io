@@ -124,6 +124,41 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
+#portfolioCarousel {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    color: var(--primary-color);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(50%) sepia(40%) saturate(1000%) hue-rotate(160deg);
+}
+
+.carousel-item {
+    padding: 20px 0;
+}
+
+#portfolioCarousel .card {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
 /* responsiveness */
 @media (max-width: 992px) {
     .hero-content h1 {
