@@ -1,381 +1,228 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Merriweather Sans", "sans-serif";
+:root {
+    --primary-color: #588ead;
+    --secondary-color: #32607a;
+    --light-color: #e7d6bd;
+    --dark-color: #212529;
 }
 
-h1, h2, h3 {
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
 }
 
-#top {
-    text-align: center;
-    height: 100vh;
-    background-image: url(./images/coffee_laptop.jpg);
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-}
-
-#top h1 {
-    margin-top: 0;
-    padding-top: 20vh;
-    color: white;
-    text-shadow: black 2px 2px 4px;
-    font-size: 5rem;
-}
-
-header {
-    color: white;
-    text-shadow: black 1px 1px 2px;
-    font-weight: bold;
-    font-family: 'Josefin Sans', sans-serif;
-}
-  
-nav {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-  
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-  
-nav li {
-    border: 2px solid hsla(360, 100%, 100%, 0);
-    line-height: 0;
-    margin: 1vw;
-}
-  
-nav li:hover {
-    border: 2px solid white;
-}
-  
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 2vw;
+.section-title {
+    position: relative;
     display: inline-block;
+    margin-bottom: 1rem;
 }
 
-#profile {
-    /* border: solid red; */
-    background-color: rgb(88, 142, 173);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 0.8rem;
-    color: white;
-    text-align: center;
-    padding: 2vw;
+.divider {
+    height: 2px;
+    width: 40px;
+    background: var(--primary-color);
+    margin: 0.3rem auto 2rem auto;
 }
 
-#profile hr {
-    border: 2px solid white;
-    border-radius: 5px;
-    width: 40%;
-    margin: auto;
-    /* margin-bottom: 2rem; */
-  }
-
-#profile h3 {
-    font-size: 2rem;
-    /* margin-top: 1vw; */
-    margin-top: 2vh;
-    
+#contact .divider {
+    background: white;
 }
 
-#profile h4 {
-    font-size: 1.5rem;
-    font-family: 'Josefin Sans', sans-serif;
-    margin: 3vh
-    /*margin: 0;
-    padding: 0;
-    text-align: center; */
-}
-
-#profile i {
-    font-size: 2rem;
-    /* border: solid purple; */
-}
-
-#profile-picture {
-    min-width: 20vw;
-    min-height: 20vw;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px black;
-    display: inline-block;
-    background-image: url(./images/profile.jpeg);
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/coffee_laptop.jpg');
     background-size: cover;
     background-position: center;
-    margin: 2rem;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding-top: 80px; /* Account for fixed navbar */
 }
 
-#left-profile-container {
-    /* border: solid blue; */
-    flex-basis: 30%;
-    min-width: 300px;
+.profile-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-#middle-profile-container {
-    /* border: solid pink; */
-    flex-basis: 30%;
+.about-item {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 }
 
-#right-profile-container {
-    /* border: solid green; */
-    flex-basis: 30%;
-    min-width: 300px;
+.about-item:hover {
+    transform: translateY(-5px);
 }
 
-#left-profile-container p, #right-profile-container p {
-    /* border: solid orange; */
-    margin-top: 2vw;
-    margin-bottom: 3vw;
-    text-align: justify;
-}
-
-/* Rest to style later + add profile pic */
-  
-#portfolio {
-    width: 100vw;
-    display: inline-block;
-    background: rgb(231, 214, 189);
-    text-align: center;
-}
-
-#portfolio h3 {
+.about-icon {
     font-size: 2rem;
-    margin-top: 3vw;
-    color: rgb(50, 96, 122);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
-#portfolio hr {
-    border: 2px solid;
-    border-radius: 5px;
-    width: 20%;
-    margin: auto;
-    color: rgb(50, 96, 122);
-    /* margin-bottom: 2rem; */
-  }
-
-#portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: stretch;
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.project {
-    width: 70vw;
-    display: flex;
-    margin: 6vh;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.project p {
-    font-size: 0.8rem;
-    text-align: justify
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
 }
 
-.project ul {
-    font-size: 0.8rem;
-    text-align: left;
-    padding-left: 2vw;
+.skills {
+    margin-top: 1rem;
 }
 
-.project-image {
-    flex-basis: 60%;
+.skills .badge {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    padding: 0.5em 0.8em;
+    border-radius: 4px;
 }
 
-.image {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-    box-shadow: 0px 0px 5px grey;
-    opacity: 0.95;
+.bg-primary {
+    background-color: var(--secondary-color) !important;
+    color: white;
 }
 
-.image:hover {
-    box-shadow: 0px 0px 10px grey;
+.social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    color: var(--light-color) !important;
+}
+
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(33, 37, 41, 0.9) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.invisible-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+#portfolioCarousel {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.carousel-indicators .active {
     opacity: 1;
 }
 
-.project-text {
-    flex-basis: 40%;
-    text-align: justify;
-    margin-left: 2vw;
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    color: var(--primary-color);
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(50%) sepia(40%) saturate(1000%) hue-rotate(160deg);
 }
 
-.skill-button {
-    margin: 0.2vw;
-    background-color: rgb(88, 142, 173);
-    color: white;
-    padding: 5px 15px 4px 15px;
-    border: 1px solid lightgrey;
-    border-radius: 8px;
-    font-size: 10px;
-    font-family: 'Josefin Sans', sans-serif;
+.carousel-item {
+    padding: 20px 0;
 }
 
-.project-text h3 {
-    margin: 0;
-    color: rgb(88, 142, 173);
-}
-  
-.project-text h4 {
-    color: #9b603d;
-    margin-top: 0px;
+#portfolioCarousel .card {
+    margin: 0 auto;
+    max-width: 600px;
 }
 
-#contact {
-    min-height: 70vh;
-    padding: 0 4vw;
-    background: rgb(88, 142, 173);
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-#email-button {
-    /* font-size: 1.4rem;
-    padding: 15px 35px;
-    border-radius: 8px;
-    font-family: 'Josefin Sans', sans-serif;
-    box-shadow: 1px 1px 4px black;
-    color: white; */
-    background-color: rgb(50, 96, 122);
-    font-size: 1.4rem;
-    width: fit-content;
-    display:inline-block;
-    padding:0.8em 2em;
-    border:0.15em solid #FFFFFF;
-    margin:0 0.3em 0.3em 0;
-    border-radius: 1em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight:300;
-    color:#FFFFFF;
-    text-align:center;
-    transition: all 0.2s;
-}
-  
-#email-button:hover {
-    /* background-color: white;
-    color: black;
-    cursor: pointer; */
-    color:rgb(50, 96, 122);
-    background-color:#FFFFFF;
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
 }
 
-footer {
-    width: 100vw;
-    height: 5vh;
-    background: rgb(50, 96, 122);
-    color: white;
-    text-align: center;
-    font-size: 0.7em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(167, 138, 174, 0.2);
 }
 
-#contact-icons i {
-    font-size: 3.5rem;
-    margin: 1vw;
-    color: rgb(50, 96, 122);
-  }
-  
-#contact-icons i:hover {
-    color: white;
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-
-nav {
-    padding-top: 2vw;
-    justify-content: center;
-    font-size: 1.2rem;
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.show > .btn-outline-primary.dropdown-toggle {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #fff !important;
+    box-shadow: none !important;
 }
 
-nav ul {
-    margin: 0 5vw;
+/* responsiveness */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
 }
 
-nav li {
-    padding: 2vw 0;
+@media (max-width: 768px) {
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 2rem;
+    }
+    
+    .about-item {
+        margin-bottom: 1.5rem;
+    }
 }
 
-#profile {
-    flex-direction: column;
-    padding: 5vw;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-#middle-profile-container {
-    order: -1;
-}
-
-#profile-picture {
-    width: 250px;
-    height: 250px;
-    margin-bottom: 3vw;
-}
-
-/* #profile_blurb {
-    margin-top: 12vw;
-    margin-bottom: 12vw;
-} */
-
-.project {
-    width: 90vw;
-    flex-direction: column;
-}
-
-.project-text {
-    margin: 0vw;
-    text-align: center;
-}
-
-.project-image {
-    text-align: center;
-    display: inline-block;
-    margin-bottom: 1vw;
-}
-
-.skills {
-    text-align: right;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.skill-button {
-    font-size: 0.8rem;
-}
-
-#contact {
-    min-height: 100vh;
-}
-
-#contact-icons i {
-    margin: 2vw;
-    font-size: 2rem;
-}
-
-#cv {
-    max-width: 85vw;
-}
-
+.fade-in {
+    animation: fadeIn 1s ease forwards;
 }

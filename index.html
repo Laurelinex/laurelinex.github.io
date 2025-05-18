@@ -1,219 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Merriweather+Sans:400,400i,700" rel="stylesheet">
-    <link rel="icon" href="./images/icons8-laptop-coding-64.png">
-    <link rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous">
-    <title>Laureline Vaucoy</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Laureline Vaucoy | Developer</title>
+        <meta name="description" content="Portfolio of Laureline Vaucoy, Full-Stack Software Developer">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="./images/icons8-laptop-coding-64.png">
+    </head>
 
-<body>
-    <section id="top">
-        <header>
-            <a id="home"></a>
-          <nav>
-            <ul>
-              <li><a href="#profile">About</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <!-- <li><a href="">CV</a></li> -->
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
+    <body data-bs-spy="scroll" data-bs-target="#navbar">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <!-- <a class="navbar-brand" href="#">Laureline Vaucoy</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="hero-section">
+            <div class="container h-100 d-flex align-items-center justify-content-center">
+                <div class="hero-content text-center text-white">
+                    <h1 class="display-3 fw-bold">Laureline Vaucoy</h1>
+                    <h2 class="display-6 mb-4">Full-Stack Software Developer</h2>
+                    <a href="#portfolio" class="btn btn-primary btn-lg">View My Work</a>
+                </div>
+            </div>
         </header>
-        <h1>Laureline Vaucoy</h1>
-        <h2>Full-Stack Software Developer</h2>
-    </section>
-    
 
-    <section id="profile">
-
-        <div id="left-profile-container">
-            <!-- <i class="fas fa-graduation-cap"></i> -->
-            <i class="fas fa-globe-americas"></i>
-            <p>You might suspect it from my name; I’m originally from France. I left to study Linguistics abroad when I was 18 with the University of Poitiers in France, the University of Technology in Sydney, Australia and the University of Nanjing in China, graduating in Translation Studies. I picked up a few languages along the way like Mandarin Chinese, English and more recently Python, JavaScript, Java, HTML and CSS.</p>
-
-            <p>After my Masters at the University of Sheffield in Communication, I worked for nearly three years as a Project Manager in the localisation industry, combining my language skills with my time-management and organisational skills to deliver localised media content for TV and Video-On-Demand platforms across the world.</p>
-            
-            <!-- <i class="fas fa-cogs"></i> -->
-            <i class="fas fa-code-branch"></i>
-            <p>I decided to move away from the language sector and relocated to Scotland to join the Professional Software Development course at CodeClan where I gained thousands of hours’ worth of hands-on coding experience. I got to build tracking apps, games, and even a food ordering app implementing Stripe. I absolutely love the challenge and the creative thinking that building apps involves. </p>
-        </div>
-
-        <div id="middle-profile-container">
-            <h3>About Me</h3>
-            <hr>
-            <div id="profile-picture"></div>
-            <h4>Laureline Vaucoy</h4>
-        </div>
-
-        <div id="right-profile-container">
-
-            <i class="fas fa-briefcase"></i>
-            <p>I am open to opportunities at small and medium sized businesses that would allow me to hone both my frontend and backend skills and dive deeper into the world of full-stack software development.</p>
-
-            <i class="fas fa-gamepad"></i>
-            <p>Indie gaming has been a real passion of mine since I realised that what I look for in a game is a unique experience, be it original storytelling, experimental game mechanics or stunning pixel art visuals! I am a huge KC:D fan but also always looking for the latest city builder or old-school point and click adventure title.</p>
-    
-            <i class="fas fa-route"></i>
-            <p>I enjoy travelling as well and usually have in mind the next place I’d like to visit, with an itinerary for all the new foods I’m planning to try. Next stop when circumstances permit will be the Czech Republic.</p>
-        </div>
-        
-    </section>
-
-    <section id="portfolio">
-        
-        <br>
-        <h3>Portfolio</h3>
-        <hr>
-        <br>
-
-        <div id="portfolio-container">
-
-            <!-- <p>Here are a few projects I've been working in lately. Checkout my GitHub for more info.</p> -->
-
-            <div class="project">
-                <div class="project-image">
-                    <a href="https://github.com/Laurelinex/fooDee" target="_blank">
-                    <img class="image" alt="snaps of the fooDee web app running in a mobile browser" src="./images/fooDee.png">
-                    </a>
+        <section id="about" class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="divider mx-auto"></div>
+                    </div>
                 </div>
-                <div class="project-text">
-                    <h3>fooDee</h3>
-                    <h4>Group project</h4>
-                    <br>
-                    <p>A Covid friendly full-stack mobile first web app to allow customers at a bar/restaurant/pub to place food and drink orders from their table. The app implements Stripe and is ready to take payments.</p>
-                    <br>
-                    <div class="skills">
-                        <div class="skill-button">Java</div>
-                        <div class="skill-button">JavaScript</div>
-                        <div class="skill-button">Spring</div>
-                        <div class="skill-button">Hibernate</div>
-                        <div class="skill-button">React</div>
-                        <div class="skill-button">Stripe</div>
-                        <div class="skill-button">Leaflet</div>
-                        <div class="skill-button">HTML</div>
-                        <div class="skill-button">CSS</div>
+                
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                        <img src="./images/profile.jpeg" alt="Laureline Vaucoy" class="img-fluid rounded-circle profile-img">
+                        <!-- <h3 class="mt-4">Laureline Vaucoy</h3>
+                        <p class="text-muted">Full-Stack Developer</p> -->
+                    </div>
+                    
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="about-item">
+                                    <i class="bi bi-globe about-icon"></i>
+                                    <h4>Background</h4>
+                                    <p>Originally from France, I've studied Linguistics in the UK, with additional research in Australia and China, before working as a Project Manager for media localisation. Now I build software from Scotland.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="about-item">
+                                    <i class="bi bi-briefcase about-icon"></i>
+                                    <h4>Career</h4>
+                                    <p>I transitioned into tech through rigorous training and have spent 5+ years shipping production-grade applications from the defense industry to web/mobile agency work, collaborating directly with clients to turn needs into scalable technical solutions.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="about-item">
+                                    <i class="bi bi-code-slash about-icon"></i>
+                                    <h4>Development</h4>
+                                    <p>My technical expertise centers on React and Blazor applications. I operate equally well in greenfield prototyping and legacy refactoring. I ship robust solutions without over-engineering, but never compromise on security or maintainability.</p>
+                                </div>
+                            </div>             
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="about-item">
+                                    <i class="bi bi-controller about-icon"></i>
+                                    <h4>Interests</h4>
+                                        <p>I'm passionate about indie gaming, particularly immersive RPGs like Kingdom Come: Deliver<a class="invisible-link" href="secret.html">a</a>nce, my aboslute favourite. When not on a PC, I enjoy traveling and exploring new cuisines. Next stop when circumstances permit will be the Czech Republic.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="project">
-                <div class="project-image">
-                    <a href="https://github.com/Laurelinex/UKTop10" target="_blank">
-                    <img class="image" alt="snap of Top 10 iTunes songs app running in browser" src="./images/UKTop10.png">
-                    </a>
+        <section id="portfolio" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section-title">Portfolio</h2>
+                        <div class="divider mx-auto"></div>
+                        <p class="lead">Some projects from my learning journey and independent exploration</p>
+                    </div>
                 </div>
-                <div class="project-text">
-                    <h3>UK Charts - Top 10</h3>
-                    <h4>Solo project</h4>
-                    <br>
-                    <p>A frontend app that displays the current UK top 10 songs from an iTunes API, plays an audio preview, and can filter by genre.</p>
-                    <br>
-                    <div class="skills">
-                        <div class="skill-button">JavaScript</div>
-                        <div class="skill-button">React</div>
-                        <div class="skill-button">React Router</div>
-                        <div class="skill-button">HTML</div>
-                        <div class="skill-button">CSS</div>
+
+                <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="carousel-items-container">
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5 bg-dark text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <div class="divider mx-auto bg-white"></div>
+                        <p class="lead">Feel free to reach out for professional inquiries or just to connect!</p>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <a href="mailto:laureline.vaucoy@gmail.com" class="btn btn-primary btn-lg mb-4">Contact Me</a>
+                        
+                        <div class="social-links mt-4">
+                            <a href="https://github.com/Laurelinex" target="_blank" class="text-white mx-3"><i class="bi bi-github fs-3"></i></a>
+                            <a href="https://www.linkedin.com/in/laureline-vaucoy/" target="_blank" class="text-white mx-3"><i class="bi bi-linkedin fs-3"></i></a>
+                            <a href="mailto:laureline.vaucoy@gmail.com" class="text-white mx-3"><i class="bi bi-envelope fs-3"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="project">
-                <div class="project-image">
-                    <a href="https://github.com/Laurelinex/magic_8-ball" target="_blank">
-                    <img class="image" alt="snap of the 8ball app running in browser" src="./images/8ball.png">
-                    </a>
-                </div>
-                <div class="project-text">
-                    <h3>Magic 8-Ball</h3>
-                    <h4>Solo project</h4>
-                    <br>
-                    <p>A simple frontend app that takes in user questions and returns a response from the 8 ball, simulating the plastic fortune-telling toy from the 1950's.</p>
-                    <br>
-                    <div class="skills">
-                        <div class="skill-button">JavaScript</div>
-                        <div class="skill-button">React</div>
-                        <div class="skill-button">HTML</div>
-                        <div class="skill-button">CSS</div>
-                    </div>
-                </div>
+        <footer class="py-4 bg-black text-white text-center">
+            <div class="container">
+                <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Laureline Vaucoy. All rights reserved.</p>
             </div>
+        </footer>
 
-            <div class="project">
-                <div class="project-image">
-                    <a href="https://github.com/Laurelinex/W9_FarkleProject" target="_blank">
-                    <img class="image" alt="snap of the Farkle game running in browser" src="./images/Farkle.png">
-                    </a>
-                </div>
-                <div class="project-text">
-                    <h3>Farkle</h3>
-                    <h4>Group project</h4>
-                    <br>
-                    <p>A full-stack browser game version of the gambling dice game Farkle (aka Hot Dice aka 10000) along with a leaderboard rendering players and their stats, and sorted by best scores.</p>
-                    <br>
-                    <div class="skills">
-                        <div class="skill-button">JavaScript</div>
-                        <div class="skill-button">MongoDB</div>
-                        <div class="skill-button">React</div>
-                        <div class="skill-button">Express.js</div>
-                        <div class="skill-button">HTML</div>
-                        <div class="skill-button">CSS</div>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="project">
-                <div class="project-image">
-                    <a href="https://github.com/Laurelinex/GlasgowBucket_bucketlistproject" target="_blank">
-                    <img class="image" alt="snap of the Glasgow Bucket running in browser" src="./images/Glasgow_bucket.png">
-                    </a>
-                </div>
-                <div class="project-text">
-                    <h3>Glasgow Bucket</h3>
-                    <h4>Solo project</h4>
-                    <br>
-                    <p>A bucket list app of all things to see and do in Glasgow and for users to be able to keep track of their progress as they discover the city. Places can be filtered by area, budget or whether they are lockdown-friendly or not.</p>
-                    <br>
-                    <div class="skills">
-                        <div class="skill-button">Python</div>
-                        <div class="skill-button">SQL</div>
-                        <div class="skill-button">Flask</div>
-                        <div class="skill-button">PostgreSQL</div>
-                        <div class="skill-button">HTML</div>
-                        <div class="skill-button">CSS</div>
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>If you would like to discuss a project or a programming opportunity, please do not hesitate to get in touch.</p>
-        <!-- <a href="mailto:laureline.vaucoy@gmail.com" target="_blanks">
-            <button id="email-button">Get in touch!</button>
-        </a> -->
-        <a href="mailto:laureline.vaucoy@gmail.com" target="_blanks" id="email-button">Get in touch!</a>
-        <div id="contact-icons">
-            <a href="https://github.com/Laurelinex" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:laureline.vaucoy@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/laureline-vaucoy/" target="blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </section>
-
-    <footer>
-        <p>by Laureline Vaucoy</p>
-    </footer>
-
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('portfolio-carousel-items.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('carousel-items-container').innerHTML = html;
+                    });
+            });
+        </script>
+    </body>
 </html>
