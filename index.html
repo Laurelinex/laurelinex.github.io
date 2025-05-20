@@ -12,6 +12,27 @@
     </head>
 
     <body data-bs-spy="scroll" data-bs-target="#navbar">
+        <div class="modal fade" id="inviteModal" tabindex="-1" aria-labelledby="inviteModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="inviteModalLabel">Hello again.</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>But where could the next clue be?</p>
+                        </br>
+                        <div class="text-center">
+                            <p><em>The greatest tale ever told hides here in plain sight, its name echoing through Bohemia's valleys.</em></p>
+                            <p><em>Where a <b>vowel</b> stands alone, a path unfolds.</em></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button id="inviteCloseBtn" type="button" class="btn btn-primary">I understand (close).</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <!-- <a class="navbar-brand" href="#">Laureline Vaucoy</a> -->
@@ -158,6 +179,17 @@
                     .then(html => {
                         document.getElementById('carousel-items-container').innerHTML = html;
                     });
+
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has('fromInvite') && urlParams.get('fromInvite') === 'true') {
+                    const inviteModal = new bootstrap.Modal(document.getElementById('inviteModal'));
+                    inviteModal.show();
+
+                    // Only allow closing via the button
+                    document.getElementById('inviteCloseBtn').addEventListener('click', function() {
+                        inviteModal.hide();
+                    });
+                }
             });
         </script>
     </body>

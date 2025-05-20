@@ -226,3 +226,10 @@ h1, h2, h3, h4, h5, h6 {
 .fade-in {
     animation: fadeIn 1s ease forwards;
 }
+
+/* Modal shows in middle of screen */
+#inviteModal .modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
