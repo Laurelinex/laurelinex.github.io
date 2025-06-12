@@ -406,6 +406,46 @@
             text-decoration: none;
         }
 
+        .navbar-nav {
+            display: flex;
+            gap: 18px;
+            align-items: flex-end;
+        }
+        .navbar-nav .nav-item {
+            margin: 0;
+        }
+        .navbar-nav .nav-link {
+            color: var(--white);
+            font-family: 'NewBeginnings', Arial, sans-serif;
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+            padding: 8px 18px 6px 18px;
+            border-radius: 12px;
+            background: transparent;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-radius 0.2s;
+            position: relative;
+        }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            background: var(--yellow);
+            color: var(--purple);
+            box-shadow: 0 4px 16px 0 rgba(242,176,0,0.10);
+            text-decoration: none;
+            border-radius: 12px;
+        }
+        .navbar-nav .nav-link:after {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 0;
+            height: 3px;
+            background: var(--pink);
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        .navbar-nav .nav-link:hover:after, .navbar-nav .nav-link.active:after {
+            width: 60%;
+        }
+
     </style>
 </head>
 <body>
@@ -680,18 +720,18 @@
 
         document.addEventListener("DOMContentLoaded", function() {
             const urlParams = new URLSearchParams(window.location.search);
-            const inviteModalInstance = new bootstrap.Modal(document.getElementById('inviteModal'));
+            const inviteModal = new bootstrap.Modal(document.getElementById('inviteModal'));
+            document.getElementById('inviteCloseBtn').addEventListener('click', function() {
+                inviteModal.hide();
+            });
             if (urlParams.has('fromInvite') && urlParams.get('fromInvite') === 'true') {
-                inviteModalInstance.show();
-                document.getElementById('inviteCloseBtn').addEventListener('click', function() {
-                    inviteModalInstance.hide();
-                });
+                inviteModal.show();
             }
             var remindBtn = document.querySelector('.hero-buttons .btn-outline');
             if (remindBtn) {
                 remindBtn.addEventListener('click', function(e) {
                     e.preventDefault();
-                    inviteModalInstance.show();
+                    inviteModal.show();
                 });
             }
         });
