@@ -400,6 +400,12 @@
         .section-chevron.rotate {
             transform: rotate(180deg);
         }
+        
+        .invisible-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
     </style>
 </head>
 <body>
@@ -564,7 +570,7 @@
                     <article class="feature-card">
                         <img src="images/charline/Kingdom-Come-Deliverance-game.jpg" alt="Kingdom Come Deliverance" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Kingdom Come: Deliverance</h3>
+                            <h3 class="card-title">Kingdom Come: Deliver<a class="invisible-link" href="secret.html">a</a>nce</h3>
                             <p>Epic quests.</p>
                         </div>
                     </article>
@@ -627,6 +633,28 @@
         </section>
     </main>
 
+    <!-- Invite Modal -->
+    <div class="modal fade" id="inviteModal" tabindex="-1" aria-labelledby="inviteModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 18px; background: var(--pink); color: var(--white); font-family: 'NewBeginnings', Arial, sans-serif;">
+                <div class="modal-header" style="border-bottom: none;">
+                    <h5 class="modal-title" id="inviteModalLabel">Hello again.</h5>
+                </div>
+                <div class="modal-body">
+                    <p>But where could the next clue be?</p>
+                    <br/>
+                    <div class="text-center">
+                        <p><em>The greatest tale ever told hides here in plain sight, its name echoing through Bohemia's valleys.</em></p>
+                        <p><em>Where a <b>vowel</b> stands alone, a path unfolds.</em></p>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center" style="border-top: none;">
+                    <button id="inviteCloseBtn" type="button" class="btn btn-yellow" style="font-family: 'NewBeginnings', Arial, sans-serif;">I understand (close).</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content" style="font-family: 'NewBeginnings', sans-serif;">Made with love</div>
@@ -646,6 +674,24 @@
                 });
                 collapse.addEventListener('hide.bs.collapse', function() {
                     chevron.style.transform = 'rotate(0deg)';
+                });
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const inviteModalInstance = new bootstrap.Modal(document.getElementById('inviteModal'));
+            if (urlParams.has('fromInvite') && urlParams.get('fromInvite') === 'true') {
+                inviteModalInstance.show();
+                document.getElementById('inviteCloseBtn').addEventListener('click', function() {
+                    inviteModalInstance.hide();
+                });
+            }
+            var remindBtn = document.querySelector('.hero-buttons .btn-outline');
+            if (remindBtn) {
+                remindBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    inviteModalInstance.show();
                 });
             }
         });
