@@ -386,6 +386,20 @@
             margin: 0;
             padding: 0;
         }
+
+        .section-toggle {
+            width: auto !important;
+            margin: 0 auto !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        .section-chevron {
+            transition: transform 0.3s cubic-bezier(.4,1.3,.6,1);
+        }
+        .section-chevron.rotate {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body>
@@ -431,157 +445,184 @@
         </div>
     </section>
 
-    <!-- Main Content - New Sections with creative titles and all images used -->
     <main class="container">
         <section class="content-section" id="tasty">
-            <h2 class="section-title">Tasty Times</h2>
-            <div class="card-grid">
-                <article class="feature-card">
-                    <img src="images/charline/restaurant-korean.jpg" alt="Korean restaurant" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Korean BBQ</h3>
-                        <p>Discovering new flavours and enjoying delicious meals together.</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/restaurant-meat.jpg" alt="Steak night" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Steak Night</h3>
-                        <p>Celebrating with perfectly cooked steaks and good company.</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/restaurant.jpg" alt="Restaurant" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Dining Out</h3>
-                        <p>Exploring Edinburgh’s vibrant food scene together.</p>
-                    </div>
-                </article>
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <button class="section-toggle btn btn-link w-100 d-flex justify-content-center align-items-center px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-tasty" aria-expanded="false" aria-controls="collapse-tasty" style="font-size:2rem;color:inherit;text-decoration:none;">
+                    <h2 class="section-title d-inline text-center flex-grow-1 mb-0">Tasty Times</h2>
+                    <i class="bi bi-chevron-down ms-2 section-chevron" style="transition: transform 0.3s;"></i>
+                </button>
+            </div>
+            <div class="collapse" id="collapse-tasty">
+                <div class="card-grid">
+                    <article class="feature-card">
+                        <img src="images/charline/restaurant-korean.jpg" alt="Korean restaurant" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Korean BBQ</h3>
+                            <p>Discovering new flavours and enjoying delicious meals together.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/restaurant-meat.jpg" alt="Steak night" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Steak Night</h3>
+                            <p>Celebrating with perfectly cooked steaks and good company.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/restaurant.jpg" alt="Restaurant" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Dining Out</h3>
+                            <p>Exploring Edinburgh’s vibrant food scene together.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
         <section class="content-section" id="wild">
-            <h2 class="section-title">Wild Moments</h2>
-            <div class="card-grid">
-                <article class="feature-card">
-                    <img src="images/charline/perth.jpg" alt="Camping in Perth" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Perthshire Discovery</h3>
-                        <p>Camping under the stars, sharing stories and marshmallows by the fire.</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/door-troubles.jpg" alt="Camping mishap" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Door Mishaps</h3>
-                        <p>Memorable moments attempting to open doors. It's harder than it looks!</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/car-troubles.jpg" alt="Car troubles" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Car Troubles</h3>
-                        <p>Adventures sometimes mean overcoming obstacles. In this case one medium sized rock in the middle of the road.</p>
-                    </div>
-                </article>
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <button class="section-toggle btn btn-link w-100 d-flex justify-content-center align-items-center px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-wild" aria-expanded="false" aria-controls="collapse-wild" style="font-size:2rem;color:inherit;text-decoration:none;">
+                    <h2 class="section-title d-inline text-center flex-grow-1 mb-0">Wild Moments</h2>
+                    <i class="bi bi-chevron-down ms-2 section-chevron" style="transition: transform 0.3s;"></i>
+                </button>
+            </div>
+            <div class="collapse" id="collapse-wild">
+                <div class="card-grid">
+                    <article class="feature-card">
+                        <img src="images/charline/door-troubles.jpg" alt="Camping mishap" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Door Mishaps</h3>
+                            <p>Memorable moments attempting to open doors. It's harder than it looks!</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/car-troubles.jpg" alt="Car troubles" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Car Troubles</h3>
+                            <p>Adventures sometimes mean overcoming obstacles. In this case one medium sized rock in the middle of the road.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
         <section class="content-section" id="hiking">
-            <h2 class="section-title">Hiking</h2>
-            <div class="card-grid">
-                <article class="feature-card">
-                    <img src="images/charline/hike-lomond.jpg" alt="Hiking at Loch Lomond" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Ben Lomond</h3>
-                        <p>Climbing the iconic Ben Lomond and enjoying breathtaking views together.</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/hike-chonzie.jpg" alt="Hiking at Ben Chonzie" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Ben Chonzie</h3>
-                        <p>Adventuring through the wilds of Perthshire and spotting wildlife.</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/yester.jpg" alt="Yester hike" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Yester</h3>
-                        <p>Exploring mysterious ruins and woodland trails together.</p>
-                    </div>
-                </article>
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <button class="section-toggle btn btn-link w-100 d-flex justify-content-center align-items-center px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-hiking" aria-expanded="false" aria-controls="collapse-hiking" style="font-size:2rem;color:inherit;text-decoration:none;">
+                    <h2 class="section-title d-inline text-center flex-grow-1 mb-0">Hiking</h2>
+                    <i class="bi bi-chevron-down ms-2 section-chevron" style="transition: transform 0.3s;"></i>
+                </button>
+            </div>
+            <div class="collapse" id="collapse-hiking">
+                <div class="card-grid">
+                    <article class="feature-card">
+                        <img src="images/charline/hike-lomond.jpg" alt="Hiking at Loch Lomond" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Ben Lomond</h3>
+                            <p>Climbing the iconic Ben Lomond and enjoying breathtaking views together.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/hike-chonzie.jpg" alt="Hiking at Ben Chonzie" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Ben Chonzie</h3>
+                            <p>Adventuring through the wilds of Perthshire and spotting wildlife.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/c-yester.jpg" alt="Yester Castle hike" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Yester Castle</h3>
+                            <p>Exploring the mysterious ruins of a dead necromancer built long ago by his goblin army.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
         <section class="content-section" id="funandgames">
-            <h2 class="section-title">Fun & Games</h2>
-            <div class="card-grid">
-                <article class="feature-card">
-                    <img src="images/charline/jousting.jpg" alt="Jousting event" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Medieval Day</h3>
-                        <p>The lady's honour was avenged!</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/slay-the-spire-game.png" alt="Slay the Spire" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Slay the Spire</h3>
-                        <p>Strategizing through endless runs.</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/Kingdom-Come-Deliverance-game.jpg" alt="Kingdom Come Deliverance" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Kingdom Come: Deliverance</h3>
-                        <p>Epic quests.</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/axe-throwing.jpg" alt="Axe throwing" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Axe Throwing</h3>
-                        <p>I was really good at this.</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/standup.jpg" alt="Comedy show" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Standup Shows</h3>
-                        <p>Sometimes it's funny, sometimes it's not.</p>
-                    </div>
-                </article>
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <button class="section-toggle btn btn-link w-100 d-flex justify-content-center align-items-center px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-funandgames" aria-expanded="false" aria-controls="collapse-funandgames" style="font-size:2rem;color:inherit;text-decoration:none;">
+                    <h2 class="section-title d-inline text-center flex-grow-1 mb-0">Fun & Games</h2>
+                    <i class="bi bi-chevron-down ms-2 section-chevron" style="transition: transform 0.3s;"></i>
+                </button>
+            </div>
+            <div class="collapse" id="collapse-funandgames">
+                <div class="card-grid">
+                    <article class="feature-card">
+                        <img src="images/charline/jousting.jpg" alt="Jousting event" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Medieval Day</h3>
+                            <p>The lady's honour was avenged!</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/slay-the-spire-game.png" alt="Slay the Spire" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Slay the Spire</h3>
+                            <p>Strategizing through endless runs.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/Kingdom-Come-Deliverance-game.jpg" alt="Kingdom Come Deliverance" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Kingdom Come: Deliverance</h3>
+                            <p>Epic quests.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/axe-throwing.jpg" alt="Axe throwing" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Axe Throwing</h3>
+                            <p>I was really good at this.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/standup.jpg" alt="Comedy show" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Standup Shows</h3>
+                            <p>Sometimes it's funny, sometimes it's not.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
         <section class="content-section" id="wanderlust">
-            <h2 class="section-title">Wanderlust</h2>
-            <div class="card-grid">
-                <article class="feature-card">
-                    <img src="images/charline/toulouse.jpg" alt="Toulouse trip" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Toulouse</h3>
-                        <p>Exploring the Pink (Orange) City.</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/toulouse-2.jpg" alt="Toulouse trip 2" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Gaillac Country</h3>
-                        <p>Proper South West of France, apparently.</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/zoo-tiger.jpg" alt="Zoo trip" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Day at the Zoo</h3>
-                        <p>I think they liked us.</p>
-                    </div>
-                </article>
-                <article class="feature-card">
-                    <img src="images/charline/zoo-sloth.jpg" alt="Zoo sloth" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Sloth Encounters</h3>
-                        <p>Meeting the slowest (and cutest) animals at the zoo.</p>
-                    </div>
-                </article>
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <button class="section-toggle btn btn-link w-100 d-flex justify-content-center align-items-center px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-wanderlust" aria-expanded="false" aria-controls="collapse-wanderlust" style="font-size:2rem;color:inherit;text-decoration:none;">
+                    <h2 class="section-title d-inline text-center flex-grow-1 mb-0">Wanderlust</h2>
+                    <i class="bi bi-chevron-down ms-2 section-chevron" style="transition: transform 0.3s;"></i>
+                </button>
+            </div>
+            <div class="collapse" id="collapse-wanderlust">
+                <div class="card-grid">
+                    <article class="feature-card">
+                        <img src="images/charline/toulouse.jpg" alt="Toulouse trip" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Toulouse</h3>
+                            <p>Exploring the Pink (Orange) City.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/toulouse-2.jpg" alt="Toulouse trip 2" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Gaillac Country</h3>
+                            <p>Proper South West of France, apparently.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/zoo-tiger.jpg" alt="Zoo trip" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Day at the Zoo</h3>
+                            <p>I think they liked us.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="images/charline/zoo-sloth.jpg" alt="Zoo sloth" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Sloth Encounters</h3>
+                            <p>Meeting the slowest (and cutest) animals at the zoo.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
@@ -593,5 +634,21 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Chevron rotation for all toggles
+        document.querySelectorAll('.section-toggle').forEach(function(btn) {
+            var chevron = btn.querySelector('.section-chevron');
+            var target = btn.getAttribute('data-bs-target');
+            var collapse = document.querySelector(target);
+            if (collapse) {
+                collapse.addEventListener('show.bs.collapse', function() {
+                    chevron.style.transform = 'rotate(180deg)';
+                });
+                collapse.addEventListener('hide.bs.collapse', function() {
+                    chevron.style.transform = 'rotate(0deg)';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
