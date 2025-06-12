@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laureline & Charles’ Adventures</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --yellow: #F2B000;
+            --yellow-text: #063853;
+            --purple: #813969;
+            --pink: #A5579E;
+            --white: #FFFFFF;
+            --black: #000000;
+            --gray: #F5F5F5;
+        }
+
+        @font-face {
+            font-family: 'NewBeginnings';
+            src: url('fonts/dk_new_beginnings/DK New Beginnings.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: var(--gray);
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            background: none !important;
+            box-shadow: none !important;
+        }
+
+        .site-header {
+            background-color: var(--purple);
+            padding: 10px 0;
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row !important;
+            justify-content: flex-start !important;
+        }
+
+        .site-logo {
+            height: 120px;
+            margin-top: 0;
+            margin-bottom: -30px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .navbar-toggler {
+            margin-left: auto !important;
+            z-index: 3;
+        }
+
+        .main-navigation {
+            display: flex;
+            align-items: flex-end;
+            height: 50px;
+            flex: 1;
+            margin-left: 40px;
+        }
+
+        .main-navigation ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .main-navigation li {
+            margin-left: 25px;
+        }
+
+        .main-navigation a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        .main-navigation a:hover:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--yellow);
+        }
+
+        .hero-banner {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            max-height: 800px;
+            overflow: hidden;
+            margin-bottom: 0;
+            /* Remove gap below hero */
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 60px 15px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: var(--white);
+        }
+
+        .hero-title {
+            font-family: 'NewBeginnings', 'Arial', sans-serif !important;
+            font-size: 60px;
+            line-height: 64px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 400;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 15px;
+        }
+
+        .hero-buttons {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 26px;
+            border-radius: 16px;
+            font-size: 20px;
+            line-height: 32px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-yellow {
+            background-color: var(--yellow);
+            color: var(--yellow-text);
+            margin-right: 15px;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .content-section {
+            width: 100vw;
+            max-width: none;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            background: none;
+            padding: 60px 0;
+            border-radius: 0;
+            box-shadow: none;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 16px;
+            padding-right: 16px;
+            color: var(--purple);
+        }
+
+        .content-section:nth-of-type(1),
+        .content-section:nth-of-type(4) {
+            background: var(--pink);
+            color: var(--white);
+        }
+
+        .content-section:nth-of-type(2),
+        .content-section:nth-of-type(5) {
+            background: var(--yellow);
+            color: var(--purple);
+        }
+
+        .content-section:nth-of-type(3) {
+            background: var(--white);
+            color: var(--purple);
+        }
+
+        .section-title {
+            font-family: 'NewBeginnings', sans-serif;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            color: inherit;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+            padding: 0;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 2px 12px 0 rgba(129,57,105,0.10);
+            border: 1px solid var(--gray);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: box-shadow 0.18s cubic-bezier(.4,1.3,.6,1);
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 8px 32px 0 rgba(129,57,105,0.18);
+        }
+
+        .card-content {
+            padding: 20px 18px 18px 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--yellow-text);
+        }
+
+        .card-content p {
+            color: var(--yellow-text);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--gray);
+        }
+
+        /* Decorative .webp images scattered left/right, never covering main content */
+        .decorative-image-float {
+            position: fixed;
+            z-index: 5;
+            width: 70px;
+            height: 70px;
+            opacity: 0.92;
+            pointer-events: none;
+            animation: rotate 5s linear infinite;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 8px 0 rgba(129,57,105,0.10);
+        }
+
+        /* Specific positions for each image */
+        #decor-img-eatingmeat { left: 2vw; top: 18vh; }
+        #decor-img-smile { right: 2vw; top: 28vh; animation-duration: 6s; }
+        #decor-img-helmet { left: 2vw; bottom: 18vh; animation-duration: 7s; }
+        #decor-img-eatingcarrot { right: 2vw; bottom: 12vh; animation-duration: 5.5s; }
+        #decor-img-solemn { left: 2vw; top: 50vh; animation-duration: 6.5s; }
+        #decor-img-hippo { right: 2vw; bottom: 32vh; animation-duration: 7.5s; }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .site-footer {
+            background-color: var(--purple);
+            color: var(--white);
+            padding: 40px 0 20px 0;
+            text-align: center;
+        }
+
+        .footer-logo { display: none; }
+
+        .footer-content {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @media (max-width: 992px) {
+            .header-container {
+                flex-direction: row !important;
+                align-items: flex-end !important;
+                justify-content: flex-start !important;
+            }
+            .site-logo {
+                height: 120px !important;
+                margin-top: 0 !important;
+                margin-bottom: -30px !important;
+                z-index: 2 !important;
+                position: relative !important;
+            }
+            .navbar-toggler {
+                margin-left: auto !important;
+                z-index: 3;
+            }
+            .navbar-nav {
+                margin-left: auto !important;
+                justify-content: flex-end !important;
+                align-items: flex-end !important;
+                width: auto !important;
+            }
+        }
+        @media (max-width: 576px) {
+            .site-logo {
+                height: 90px !important;
+            }
+            .navbar-nav {
+                display: flex !important;
+                justify-content: flex-end !important;
+                flex-direction: column !important;
+                width: 100% !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-buttons .btn {
+                margin-bottom: 15px;
+                width: 100%;
+                text-align: center;
+            }
+            .hero-buttons .btn:last-child {
+                margin-bottom: 0;
+            }
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                align-items: stretch;
+                padding: 0 8px;
+            }
+        }
+
+        main.container {
+            width: 100vw;
+            max-width: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative .webp images scattered left/right, not covering main content -->
+    <img src="images/charline/l-eatingmeat.webp" alt="Laureline eating meat" class="decorative-image-float" id="decor-img-eatingmeat">
+    <img src="images/charline/l-eatingcarrot.webp" alt="Laureline eating carrot" class="decorative-image-float" id="decor-img-eatingcarrot">
+    <img src="images/charline/l-helmet.webp" alt="Laureline helmet" class="decorative-image-float" id="decor-img-helmet">
+    <img src="images/charline/charline-smile.webp" alt="Charline smiling" class="decorative-image-float" id="decor-img-smile">
+    <img src="images/charline/charline-solemn.webp" alt="Charline solemn" class="decorative-image-float" id="decor-img-solemn">
+    <img src="images/charline/hippo.webp" alt="Hippo fun" class="decorative-image-float" id="decor-img-hippo">
+
+    <!-- Header - Logo left, larger, overflows below navbar -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--purple);">
+            <div class="container header-container" style="align-items: flex-end;">
+                <img src="images/charline/charline-logo.png" alt="Laureline & Charles" class="site-logo" style="height: 120px; margin-top: 0; margin-bottom: -30px; z-index: 2; position: relative;">
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#hiking">Hiking</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#camping">Camping</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tasty">Foods</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#funandgames">Fun</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#wanderlust">Travels</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#wild">Hickups</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <img src="images/charline/toulouse.jpg" alt="Charline at art wall" class="hero-image">
+        <div class="hero-content">
+            <h1 class="hero-title">Laureline & Charles’ Adventures</h1>
+            <div class="hero-buttons">
+                <a href="#tasty" class="btn btn-yellow">Explore Our Journey</a>
+                <a href="#" class="btn btn-outline">Remind Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content - New Sections with creative titles and all images used -->
+    <main class="container">
+        <section class="content-section" id="tasty">
+            <h2 class="section-title">Tasty Times</h2>
+            <div class="card-grid">
+                <article class="feature-card">
+                    <img src="images/charline/restaurant-korean.jpg" alt="Korean restaurant" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Korean BBQ</h3>
+                        <p>Discovering new flavours and enjoying delicious meals together.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/restaurant-meat.jpg" alt="Steak night" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Steak Night</h3>
+                        <p>Celebrating with perfectly cooked steaks and good company.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/restaurant.jpg" alt="Restaurant" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Dining Out</h3>
+                        <p>Exploring Edinburgh’s vibrant food scene together.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="content-section" id="wild">
+            <h2 class="section-title">Wild Moments</h2>
+            <div class="card-grid">
+                <article class="feature-card">
+                    <img src="images/charline/perth.jpg" alt="Camping in Perth" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Perthshire Discovery</h3>
+                        <p>Camping under the stars, sharing stories and marshmallows by the fire.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/door-troubles.jpg" alt="Camping mishap" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Door Mishaps</h3>
+                        <p>Memorable moments attempting to open doors. It's harder than it looks!</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/car-troubles.jpg" alt="Car troubles" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Car Troubles</h3>
+                        <p>Adventures sometimes mean overcoming obstacles. In this case one medium sized rock in the middle of the road.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="content-section" id="hiking">
+            <h2 class="section-title">Hiking</h2>
+            <div class="card-grid">
+                <article class="feature-card">
+                    <img src="images/charline/hike-lomond.jpg" alt="Hiking at Loch Lomond" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Ben Lomond</h3>
+                        <p>Climbing the iconic Ben Lomond and enjoying breathtaking views together.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/hike-chonzie.jpg" alt="Hiking at Ben Chonzie" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Ben Chonzie</h3>
+                        <p>Adventuring through the wilds of Perthshire and spotting wildlife.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/yester.jpg" alt="Yester hike" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Yester</h3>
+                        <p>Exploring mysterious ruins and woodland trails together.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="content-section" id="funandgames">
+            <h2 class="section-title">Fun & Games</h2>
+            <div class="card-grid">
+                <article class="feature-card">
+                    <img src="images/charline/jousting.jpg" alt="Jousting event" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Medieval Day</h3>
+                        <p>The lady's honour was avenged!</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/slay-the-spire-game.png" alt="Slay the Spire" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Slay the Spire</h3>
+                        <p>Strategizing through endless runs.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/Kingdom-Come-Deliverance-game.jpg" alt="Kingdom Come Deliverance" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Kingdom Come: Deliverance</h3>
+                        <p>Epic quests.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/axe-throwing.jpg" alt="Axe throwing" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Axe Throwing</h3>
+                        <p>I was really good at this.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/standup.jpg" alt="Comedy show" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Standup Shows</h3>
+                        <p>Sometimes it's funny, sometimes it's not.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="content-section" id="wanderlust">
+            <h2 class="section-title">Wanderlust</h2>
+            <div class="card-grid">
+                <article class="feature-card">
+                    <img src="images/charline/toulouse.jpg" alt="Toulouse trip" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Toulouse</h3>
+                        <p>Exploring the Pink (Orange) City.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/toulouse-2.jpg" alt="Toulouse trip 2" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Gaillac Country</h3>
+                        <p>Proper South West of France, apparently.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/zoo-tiger.jpg" alt="Zoo trip" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Day at the Zoo</h3>
+                        <p>I think they liked us.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <img src="images/charline/zoo-sloth.jpg" alt="Zoo sloth" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Sloth Encounters</h3>
+                        <p>Meeting the slowest (and cutest) animals at the zoo.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content" style="font-family: 'NewBeginnings', sans-serif;">Made with love</div>
+            <p style="font-family: 'NewBeginnings', sans-serif;">&copy; 2025 Charline. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
