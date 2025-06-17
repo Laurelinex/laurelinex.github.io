@@ -473,7 +473,6 @@
                 <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#hiking">Hiking</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#camping">Camping</a></li>
                         <li class="nav-item"><a class="nav-link" href="#tasty">Foods</a></li>
                         <li class="nav-item"><a class="nav-link" href="#funandgames">Fun</a></li>
                         <li class="nav-item"><a class="nav-link" href="#wanderlust">Travels</a></li>
@@ -507,6 +506,13 @@
             <div class="collapse" id="collapse-tasty">
                 <div class="card-grid">
                     <article class="feature-card">
+                        <img src="./images/hotpot.jpg" alt="Korean restaurant" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Hotpot</h3>
+                            <p>A first out of many more... </p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
                         <img src="./images/restaurant-korean.jpg" alt="Korean restaurant" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Korean BBQ</h3>
@@ -523,17 +529,37 @@
                     <article class="feature-card">
                         <img src="./images/restaurant.jpg" alt="Restaurant" class="card-image">
                         <div class="card-content">
-                            <h3 class="card-title">Dining Out</h3>
-                            <p>Exploring Edinburgh’s vibrant food scene together.</p>
+                            <h3 class="card-title">By the Sea</h3>
+                            <p>Eating seafood with a sea view!</p>
                         </div>
                     </article>
+                    <article class="feature-card">
+                        <img src="./images/sour-beers.jpg" alt="Restaurant" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Sours</h3>
+                            <p>Our trip to the Porty sour beer pub.</p>
+                        </div>
+                    </article>
+                <article class="feature-card" style="position: relative; overflow: hidden; width: 100%; height: 320px;">
+                    <div style="
+                        width: 100%; 
+                        height: 100%; 
+                        background-image: url('./images/making-dumplings.jpg');
+                        background-size: cover;
+                        background-position: center 100%;">
+                    </div>
+                    <div class="card-content" style="position: absolute; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.85); padding: 1em; text-align: center;">
+                        <h3 class="card-title" style="margin-bottom: 0.5em;">Homemade Dumplings</h3>
+                        <p style="margin: 0;">We made some delicious juicy pockets of meat!</p>
+                    </div>
+                </article>
                 </div>
             </div>
         </section>
         <section class="content-section" id="wild">
             <div class="d-flex justify-content-center align-items-center mb-4">
                 <button class="section-toggle btn btn-link w-100 d-flex justify-content-center align-items-center px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-wild" aria-expanded="false" aria-controls="collapse-wild" style="font-size:2rem;color:inherit;text-decoration:none;">
-                    <h2 class="section-title d-inline text-center flex-grow-1 mb-0">Wild Moments</h2>
+                    <h2 class="section-title d-inline text-center flex-grow-1 mb-0">Moments</h2>
                     <i class="bi bi-chevron-down ms-2 section-chevron" style="transition: transform 0.3s;"></i>
                 </button>
             </div>
@@ -543,7 +569,7 @@
                         <img src="./images/door-troubles.jpg" alt="Camping mishap" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Door Mishaps</h3>
-                            <p>Memorable moments attempting to open doors. It's harder than it looks!</p>
+                            <p>Memorable attempts to open doors. It's harder than it looks!</p>
                         </div>
                     </article>
                     <article class="feature-card">
@@ -551,6 +577,32 @@
                         <div class="card-content">
                             <h3 class="card-title">Car Troubles</h3>
                             <p>Adventures sometimes mean overcoming obstacles. In this case one medium sized rock in the middle of the road.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card" style="position: relative; overflow: hidden; width: 100%; height: 320px;">
+                        <div style="
+                            width: 100%; 
+                            height: 100%; 
+                            background-image: url('./images/speakeasy.jpg');
+                            background-size: cover;
+                            background-position: center 50%;">
+                        </div>
+                        <div class="card-content" style="position: absolute; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.85); padding: 1em; text-align: center;">
+                            <h3 class="card-title" style="margin-bottom: 0.5em;">Hidden Doors</h3>
+                            <p style="margin: 0;">We found a pub hidden behind a painting!</p>
+                        </div>
+                    </article>
+                    <article class="feature-card" style="position: relative; overflow: hidden; width: 100%; height: 320px;">
+                        <div style="
+                            width: 100%; 
+                            height: 100%; 
+                            background-image: url('./images/wild-fishing-c.jpg');
+                            background-size: cover;
+                            background-position: center 40%;">
+                        </div>
+                        <div class="card-content" style="position: absolute; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.85); padding: 1em; text-align: center;">
+                            <h3 class="card-title" style="margin-bottom: 0.5em;">Fishing like a King</h3>
+                            <p style="margin: 0;">You don't even have to try, they come to you!</p>
                         </div>
                     </article>
                 </div>
@@ -565,11 +617,22 @@
             </div>
             <div class="collapse" id="collapse-hiking">
                 <div class="card-grid">
+                    <div style="display: flex; flex-direction: column; align-items: center; margin-top: 24px;">
+                        <img src="./images/hike-c.gif" alt="Charles is strong"
+                            style="max-width: 90%; height: auto; border-radius: 18px; box-shadow: 0 4px 24px rgba(129,57,105,0.12); background: #fff; padding: 8px;">
+                    </div>
                     <article class="feature-card">
                         <img src="./images/hike-lomond.jpg" alt="Hiking at Loch Lomond" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Ben Lomond</h3>
                             <p>Climbing the iconic Ben Lomond and enjoying breathtaking views together.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="./images/arbroath.jpg" alt="Arbroath" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Arbroath</h3>
+                            <p>Our walk along the coastline after a yummy smoky.</p>
                         </div>
                     </article>
                     <article class="feature-card">
@@ -586,13 +649,23 @@
                             <p>Exploring the mysterious ruins of a dead necromancer built long ago by his goblin army.</p>
                         </div>
                     </article>
+                    <article class="feature-card">
+                        <img src="./images/arturs-seat.jpg" alt="Arthur Seat" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Arthur Seat</h3>
+                            <p>Plenty of walks around the Scottish capital.</p>
+                        </div>
+                    </article>
+                    <div style="display: flex; flex-direction: column; align-items: center; margin-top: 24px;">
+                        <img src="./images/hike-l.gif" alt="Charles Jumping" style="max-height: 340px; width: auto; border-radius: 18px; box-shadow: 0 4px 24px rgba(129,57,105,0.12); background: #fff; padding: 8px;">
+                    </div>
                 </div>
             </div>
         </section>
         <section class="content-section" id="funandgames">
             <div class="d-flex justify-content-center align-items-center mb-4">
                 <button class="section-toggle btn btn-link w-100 d-flex justify-content-center align-items-center px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-funandgames" aria-expanded="false" aria-controls="collapse-funandgames" style="font-size:2rem;color:inherit;text-decoration:none;">
-                    <h2 class="section-title d-inline text-center flex-grow-1 mb-0">Fun & Games</h2>
+                    <h2 class="section-title d-inline text-center flex-grow-1 mb-0">Fun n' Games</h2>
                     <i class="bi bi-chevron-down ms-2 section-chevron" style="transition: transform 0.3s;"></i>
                 </button>
             </div>
@@ -610,6 +683,13 @@
                         <div class="card-content">
                             <h3 class="card-title">Slay the Spire</h3>
                             <p>Strategizing through endless runs.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="./images/c-helmet.jpg" alt="Slay the Spire" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Wearing Helmets</h3>
+                            <p>Next year, we'll have a full outfit!</p>
                         </div>
                     </article>
                     <article class="feature-card">
@@ -633,6 +713,10 @@
                             <p>Sometimes it's funny, sometimes it's not.</p>
                         </div>
                     </article>
+
+                    <div style="display: flex; flex-direction: column; align-items: center; margin-top: 24px;">
+                        <img src="./images/charles-jump.gif" alt="Charles Jumping" style="max-height: 340px; width: auto; border-radius: 18px; box-shadow: 0 4px 24px rgba(129,57,105,0.12); background: #fff; padding: 8px;">
+                    </div>
                 </div>
             </div>
         </section>
@@ -653,6 +737,13 @@
                         </div>
                     </article>
                     <article class="feature-card">
+                        <img src="./images/la-rochelle.jpg" alt="Toulouse trip 2" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">La Rochelle</h3>
+                            <p>Breakfast on the harbour</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
                         <img src="./images/toulouse-2.jpg" alt="Toulouse trip 2" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Gaillac Country</h3>
@@ -667,10 +758,24 @@
                         </div>
                     </article>
                     <article class="feature-card">
+                        <img src="./images/art-wall.jpg" alt="Art Wall" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Looking at Art</h3>
+                            <p>Which one is the art piece though?</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
                         <img src="./images/zoo-sloth.jpg" alt="Zoo sloth" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Sloth Encounters</h3>
                             <p>Meeting the slowest (and cutest) animals at the zoo.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="./images/urbex-hospital.jpg" alt="Zoo sloth" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Urbex</h3>
+                            <p>Your love for exploring abandoned places.</p>
                         </div>
                     </article>
                 </div>
