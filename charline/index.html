@@ -472,11 +472,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#hiking">Hiking</a></li>
                         <li class="nav-item"><a class="nav-link" href="#tasty">Foods</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#funandgames">Fun</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#wanderlust">Travels</a></li>
                         <li class="nav-item"><a class="nav-link" href="#wild">Hickups</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hiking">Hiking</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#funandgames">Fun</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#wanderlust">Travels</a></li>   
                     </ul>
                 </div>
             </div>
@@ -489,7 +489,7 @@
         <div class="hero-content">
             <h1 class="hero-title">The Adventures of Laureline and Charles</h1>
             <div class="hero-buttons">
-                <a href="#tasty" class="btn btn-yellow">Explore Our Journey</a>
+                <a href="#tasty" class="btn btn-yellow">Explore</a>
                 <a href="#" class="btn btn-outline">Remind Me</a>
             </div>
         </div>
@@ -605,6 +605,13 @@
                             <p style="margin: 0;">You don't even have to try, they come to you!</p>
                         </div>
                     </article>
+                    <article class="feature-card">
+                        <img src="./images/cairnghorns-fog.jpg" alt="Car troubles" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Lost in the Fog</h3>
+                            <p>That time we climbed for a view of the Cairngorms...</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -685,11 +692,17 @@
                             <p>Strategizing through endless runs.</p>
                         </div>
                     </article>
-                    <article class="feature-card">
-                        <img src="./images/c-helmet.jpg" alt="Slay the Spire" class="card-image">
-                        <div class="card-content">
-                            <h3 class="card-title">Wearing Helmets</h3>
-                            <p>Next year, we'll have a full outfit!</p>
+                    <article class="feature-card" style="position: relative; overflow: hidden; width: 100%; height: 320px;">
+                        <div style="
+                            width: 100%; 
+                            height: 100%; 
+                            background-image: url('./images/c-helmet.jpg');
+                            background-size: cover;
+                            background-position: center 40%;">
+                        </div>
+                        <div class="card-content" style="position: absolute; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.85); padding: 1em; text-align: center;">
+                            <h3 class="card-title" style="margin-bottom: 0.5em;">Wearing Helmets</h3>
+                            <p style="margin: 0;">Next year, we'll have a full outfit!</p>
                         </div>
                     </article>
                     <article class="feature-card">
@@ -737,20 +750,6 @@
                         </div>
                     </article>
                     <article class="feature-card">
-                        <img src="./images/la-rochelle.jpg" alt="Toulouse trip 2" class="card-image">
-                        <div class="card-content">
-                            <h3 class="card-title">La Rochelle</h3>
-                            <p>Breakfast on the harbour</p>
-                        </div>
-                    </article>
-                    <article class="feature-card">
-                        <img src="./images/toulouse-2.jpg" alt="Toulouse trip 2" class="card-image">
-                        <div class="card-content">
-                            <h3 class="card-title">Gaillac Country</h3>
-                            <p>Proper South West of France, apparently.</p>
-                        </div>
-                    </article>
-                    <article class="feature-card">
                         <img src="./images/zoo-tiger.jpg" alt="Zoo trip" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Day at the Zoo</h3>
@@ -765,17 +764,38 @@
                         </div>
                     </article>
                     <article class="feature-card">
-                        <img src="./images/zoo-sloth.jpg" alt="Zoo sloth" class="card-image">
-                        <div class="card-content">
-                            <h3 class="card-title">Sloth Encounters</h3>
-                            <p>Meeting the slowest (and cutest) animals at the zoo.</p>
-                        </div>
-                    </article>
-                    <article class="feature-card">
                         <img src="./images/urbex-hospital.jpg" alt="Zoo sloth" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Urbex</h3>
                             <p>Your love for exploring abandoned places.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="./images/ferme-bnb.jpg" alt="Zoo sloth" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">FermBnB</h3>
+                            <p>A trip to the Cairngorms staying in a special place.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="./images/la-rochelle.jpg" alt="Toulouse trip 2" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">La Rochelle</h3>
+                            <p>Breakfast on the harbour</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="./images/toulouse-2.jpg" alt="Toulouse trip 2" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Gaillac Country</h3>
+                            <p>Proper South West of France, apparently.</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="./images/zoo-sloth.jpg" alt="Zoo sloth" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Sloth Encounters</h3>
+                            <p>Meeting the slowest (and cutest) animals at the zoo.</p>
                         </div>
                     </article>
                 </div>
@@ -795,7 +815,7 @@
                     <br/>
                     <div class="text-center">
                         <p><em>The greatest tale ever told hides here in plain sight, its name echoing through Bohemia's valleys.</em></p>
-                        <p><em>Where a <b>vowel</b> stands alone, a path unfolds.</em></p>
+                        <p><em>To continue on your quest, go to the last word, for in the title, a single <b>vowel</b> holds the key.</em></p>
                     </div>
                 </div>
                 <div class="modal-footer justify-content-center" style="border-top: none;">
