@@ -1,9 +1,9 @@
 // (Order determines the color: 0=yellow, 1=green, 2=blue, 3=purple)
 
 const GROUPS = [
+    { name: "Christmas Symbols", words: ["REINDEER", "HOLLY", "SANTA CLAUS", "STOCKING"] },
     { name: "Christmas ___", words: ["CARD", "EVE", "TREE", "CAROL"] },
     { name: "Ways to sing", words: ["CHANT", "WARBLE", "LILT", "PIPE"] },
-    { name: "Christmas Symbols", words: ["REINDEER", "HOLLY", "SANTA CLAUS", "PRESENTS"] },
     { name: "Parts of a Santa Costume", words: ["HAT", "BEARD", "BELT", "BOOTS"] }
 ];
 

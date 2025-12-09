@@ -1,7 +1,21 @@
+@font-face {
+    font-family: "NYTFranklin";
+    src: url("fonts/NYTFranklin.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Karnak";
+    src: url("fonts/karnakcondensed-normal-700.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "NYTFranklin", Arial, sans-serif;
     text-align: center;
-    background: #f5f5f5;
+    background: #fff;
     margin: 0;
     padding: 30px;
     color: #333;
@@ -9,6 +23,7 @@ body {
 
 /* Title */
 h1 {
+    font-family: "Karnak", "NYTFranklin", Arial, sans-serif;
     font-weight: 700;
     font-size: 32px;
     margin-bottom: 5px;
@@ -16,7 +31,7 @@ h1 {
 
 p {
     margin-top: 0;
-    color: #666;
+    color: #121212;
 }
 
 /* *************** */
@@ -62,9 +77,9 @@ p {
 
 
 .level-0 { background: #f9df6a; }
-.level-1 { background: #a8e6a3; }
+.level-1 { background: #a0c35a; }
 .level-2 { background: #9acbff; }
-.level-3 { background: #c9a5e7; } /* purple */
+.level-3 { background: #c9a5e7; }
 
 
 /* *************** */
@@ -80,14 +95,14 @@ p {
 }
 
 .card {
-    background: white;
-    border-radius: 12px;
+    background: #EFEFE6;
+    color: #121212;
     padding: 22px 10px;
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
     user-select: none;
-    border: 2px solid #e0e0e0;
+    border-radius: 6px;
     transition: 
         background 0.15s ease,
         border-color 0.15s ease,
@@ -96,14 +111,9 @@ p {
     box-shadow: 0 2px 5px rgba(0,0,0,0.12);
 }
 
-.card:hover {
-    border-color: #999;
-}
-
 .card.selected {
-    background: #d0e7ff;
-    border-color: #4a90e2;
-    box-shadow: 0 0 0 3px rgba(74,144,226,0.4);
+    background: #54594E !important;
+    color: #fff !important;
 }
 
 .card.locked {
@@ -126,9 +136,10 @@ button {
     padding: 12px 20px;
     margin: 0 6px;
     font-size: 15px;
-    border-radius: 8px;
-    border: none;
-    background: #eee;
+    border-radius: 32px;
+    border-color: #121212;
+    border: 1px solid;
+    background: #fff;
     cursor: pointer;
     transition: background 0.2s ease;
 }
