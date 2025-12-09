@@ -1,10 +1,10 @@
 // (Order determines the color: 0=yellow, 1=green, 2=blue, 3=purple)
 
 const GROUPS = [
-    { name: "Words for Christmas in other languages", words: ["NOEL", "NATAL", "JUL", "NAVIDAD"] },
-    { name: "Women met in the workplace", words: ["MEGAN", "HANNAH", "ROSIE", "ROXANNE"] },
-    { name: "Traditional Christmas symbols", words: ["SANTA", "TREE", "REINDEER", "WREATH"] },
-    { name: "Classic Ginger producs", words: ["SHOT", "ALE", "ROOT", "NUT"] }
+    { name: "Christmas ___", words: ["CARD", "EVE", "TREE", "CAROL"] },
+    { name: "Ways to sing", words: ["CHANT", "WARBLE", "LILT", "PIPE"] },
+    { name: "Christmas Symbols", words: ["REINDEER", "HOLLY", "SANTA CLAUS", "PRESENTS"] },
+    { name: "Parts of a Santa Costume", words: ["HAT", "BEARD", "BELT", "BOOTS"] }
 ];
 
 let cards = GROUPS.map(g => g.words).flat();
