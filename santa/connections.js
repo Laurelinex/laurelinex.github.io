@@ -1,13 +1,14 @@
 // (Order determines the color: 0=yellow, 1=green, 2=blue, 3=purple)
 
 const GROUPS = [
-    { name: "Christmas Symbols", words: ["REINDEER", "HOLLY", "SANTA CLAUS", "STOCKING"] },
-    { name: "Christmas ___", words: ["CARD", "EVE", "TREE", "CAROL"] },
-    { name: "Ways to sing", words: ["CHANT", "WARBLE", "LILT", "PIPE"] },
-    { name: "Parts of a Santa Costume", words: ["HAT", "BEARD", "BELT", "BOOTS"] }
+    { name: "Christmas Symbols", words: ["HOLLY", "REINDEER", "SANTA CLAUS", "STOCKING"] },
+    { name: "Christmas ___", words: ["CARD", "CAROL", "EVE", "TREE"] },
+    { name: "Some of Santa's Reindeers", words: ["COMET", "CUPID", "RUDOLPH", "VIXEN"] },
+    { name: "Parts of a Santa Costume", words: ["BEARD", "BELT", "BOOTS", "HAT"] }
 ];
 
 let cards = GROUPS.map(g => g.words).flat();
+cards.sort(() => Math.random() - 0.5);
 let selected = [];
 let solved = [];
 
@@ -32,9 +33,9 @@ function renderBoard() {
         div.addEventListener("click", () => toggleSelect(word, div));
 
         board.appendChild(div);
+        fitText(div);
     });
 }
-
 
 function toggleSelect(word, div) {
     if (div.classList.contains("locked")) return;
@@ -94,6 +95,22 @@ function handleCorrectGroup(group, level) {
     }, 250); // matches CSS transition
 }
 
+function fitText(card) {
+    let size = 20; // starting size
+    card.style.fontSize = size + "px";
+
+    // shrink if text is too wide for the box
+    while (card.scrollWidth > card.clientWidth && size > 8) {
+        size -= 1;
+        card.style.fontSize = size + "px";
+    }
+
+    // shrink if text is too tall after wrapping
+    while (card.scrollHeight > card.clientHeight && size > 8) {
+        size -= 1;
+        card.style.fontSize = size + "px";
+    }
+}
 
 
 function addSolvedCategory(group, level) {

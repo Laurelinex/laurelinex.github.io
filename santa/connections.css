@@ -88,27 +88,30 @@ p {
 
 #board {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 12px;
     max-width: 480px;
     margin: 20px auto;
+
+    /* force all cards in the grid to have identical height */
+    grid-auto-rows: 80px;
 }
 
 .card {
     background: #EFEFE6;
     color: #121212;
-    padding: 22px 10px;
-    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px 22px;
+    border-radius: 6px;
     font-weight: 600;
+    line-height: 1.1;
     cursor: pointer;
     user-select: none;
-    border-radius: 6px;
-    transition: 
-        background 0.15s ease,
-        border-color 0.15s ease,
-        box-shadow 0.15s ease,
-        transform 0.1s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+    transition: background 0.15s ease, box-shadow 0.15s ease;
 }
 
 .card.selected {
