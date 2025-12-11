@@ -92,7 +92,35 @@ function handleCorrectGroup(group, level) {
         addSolvedCategory(group, level);
         selected = [];
         renderBoard(); 
+        // If all groups are solved, show clue button
+        if (solved.length === GROUPS.length) {
+            showClueButton();
+        }
     }, 250); // matches CSS transition
+}
+
+function showClueButton() {
+    if (document.getElementById('clue-btn')) return;
+    // Move the clue button above the controls and style it red/white
+    const btn = document.createElement('button');
+    btn.id = 'clue-btn';
+    btn.textContent = 'See Your Clue!';
+    btn.style.display = 'block';
+    btn.style.margin = '0 auto 18px auto';
+    btn.style.fontSize = '20px';
+    btn.style.background = '#b22222';
+    btn.style.color = '#fff';
+    btn.style.fontWeight = 'bold';
+    btn.style.border = '4px solid #fff';
+    btn.style.borderRadius = '32px';
+    btn.style.cursor = 'pointer';
+    btn.style.padding = '16px 36px';
+    btn.style.letterSpacing = '1px';
+    btn.onclick = () => {
+        window.location.href = 'connections-clue.html';
+    };
+    const controls = document.querySelector('.controls');
+    controls.parentNode.insertBefore(btn, controls);
 }
 
 function fitText(card) {
