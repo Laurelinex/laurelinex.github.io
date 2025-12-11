@@ -96,7 +96,7 @@ function handleCorrectGroup(group, level) {
         if (solved.length === GROUPS.length) {
             showClueButton();
         }
-    }, 250); // matches CSS transition
+    }, 250);
 }
 
 function showClueButton() {
