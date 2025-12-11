@@ -101,17 +101,16 @@ function handleCorrectGroup(group, level) {
 
 function showClueButton() {
     if (document.getElementById('clue-btn')) return;
-    // Move the clue button above the controls and style it red/white
     const btn = document.createElement('button');
     btn.id = 'clue-btn';
-    btn.textContent = 'See Your Clue!';
+    btn.textContent = 'To The Egg!';
     btn.style.display = 'block';
     btn.style.margin = '0 auto 18px auto';
     btn.style.fontSize = '20px';
-    btn.style.background = '#b22222';
-    btn.style.color = '#fff';
+    btn.style.background = '#a0c35a';
+    btn.style.color = '#b22222';
     btn.style.fontWeight = 'bold';
-    btn.style.border = '4px solid #fff';
+    btn.style.border = '4px solid';
     btn.style.borderRadius = '32px';
     btn.style.cursor = 'pointer';
     btn.style.padding = '16px 36px';
