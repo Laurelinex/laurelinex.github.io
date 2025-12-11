@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connections Clue</title>
+    <link rel="stylesheet" href="connections.css">
+    <style>
+        body {
+            background: #eaf6ff url('snowfall.jpg') repeat center center fixed;
+            background-size: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .clue-container {
+            background: rgba(255,255,255,0.92);
+            border-radius: 20px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+            padding: 40px 32px 32px 32px;
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+            border: 3px solid #fffbe6;
+        }
+        h2 {
+            font-family: "Karnak", "NYTFranklin", Arial, sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 22px;
+            color: #b22222;
+            text-shadow: 1px 1px 0 #fffbe6, 2px 2px 0 #c9a5e7;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 */
+            margin-bottom: 24px;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border-radius: 16px;
+            background: #fff;
+        }
+        .clue-text {
+            font-size: 1.45rem;
+            color: #333;
+            margin-bottom: 0;
+            font-family: "NYTFranklin", Arial, sans-serif;
+        }
+        .festive-icons {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clue-container">
+        <h2>Congratulations!</h2>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/7vBcuFNDQe4" title="YouTube video clue" allowfullscreen></iframe>
+        </div>
+        <div class="clue-text">Enjoy! 🎄🍫</div>
+    </div>
+</body>
+</html>
