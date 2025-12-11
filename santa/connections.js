@@ -74,8 +74,18 @@ document.getElementById("submit").onclick = () => {
             return;
         }
     }
-
     message.textContent = "Not a correct grouping.";
+
+    // shake animation to currently selected cards on incorrect submissions
+    const selectedDivs = Array.from(document.querySelectorAll('.card')).filter(card =>
+        selected.includes(card.textContent)
+    );
+
+    selectedDivs.forEach(div => {
+        div.classList.add('shake');
+        div.addEventListener('animationend', () => div.classList.remove('shake'), { once: true });
+        setTimeout(() => div.classList.remove('shake'), 700);
+    });
 };
 
 function handleCorrectGroup(group, level) {
