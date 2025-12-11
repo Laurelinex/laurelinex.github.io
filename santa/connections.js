@@ -96,22 +96,27 @@ function handleCorrectGroup(group, level) {
 }
 
 function fitText(card) {
-    let size = 20; // starting size
+    let size = 18; // starting size
     card.style.fontSize = size + "px";
 
     // shrink if text is too wide for the box
-    while (card.scrollWidth > card.clientWidth && size > 8) {
+    while (card.scrollWidth > card.clientWidth && size > 6) {
         size -= 1;
         card.style.fontSize = size + "px";
     }
 
     // shrink if text is too tall after wrapping
-    while (card.scrollHeight > card.clientHeight && size > 8) {
+    while (card.scrollHeight > card.clientHeight && size > 6) {
         size -= 1;
         card.style.fontSize = size + "px";
     }
-}
 
+    // Always shrink 2 more if above 14px
+    if (size > 12) {
+        size = Math.max(12, size - 4);
+        card.style.fontSize = size + "px";
+    }
+}
 
 function addSolvedCategory(group, level) {
     const block = document.createElement("section");

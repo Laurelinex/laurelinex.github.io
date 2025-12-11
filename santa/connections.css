@@ -17,7 +17,7 @@ body {
     text-align: center;
     background: #fff;
     margin: 0;
-    padding: 30px;
+    padding: 10px;
     color: #333;
 }
 
@@ -91,7 +91,7 @@ p {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 12px;
     max-width: 480px;
-    margin: 20px auto;
+    margin: 30px auto;
 
     /* force all cards in the grid to have identical height */
     grid-auto-rows: 80px;
